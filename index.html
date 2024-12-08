@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Blog preview card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --Yellow: hsl(47, 88%, 63%);
+        --White: hsl(0, 0%, 100%);
+        --Gray500: hsl(0, 0%, 42%);
+        --Gray950: hsl(0, 0%, 7%);
+
+        --FontSize: 16px;
+        --Weight500: 500;
+        --weight800: 800;
+      }
+
+      @font-face {
+        font-family: "Figtree"; /* Your custom font name */
+        src: url("../../assets//fonts/Figtree-VariableFont_wght.ttf")
+          format("truetype"); /* Path to the font */
+        font-weight: var(--Weight500);
+        /* Specify font weight (optional) */
+        font-style: normal; /* Specify font style (optional) */
+      }
+      @font-face {
+        font-family: "FigtreeExtraBold"; /* Your custom font name */
+        src: url("../../assets//fonts/static/Figtree-ExtraBold.ttf")
+          format("truetype"); /* Path to the font */
+        font-weight: var(--Weight800);
+        /* Specify font weight (optional) */
+        font-style: normal; /* Specify font style (optional) */
+      }
+      @font-face {
+        font-family: "FigtreeSemiBold"; /* Your custom font name */
+        src: url("../../assets//fonts/static/Figtree-SemiBold.ttf")
+          format("truetype"); /* Path to the font */
+        font-weight: var(--Weight800);
+        /* Specify font weight (optional) */
+        font-style: normal; /* Specify font style (optional) */
+      }
+
+      .block-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        /* height: auto; */
+        min-height: 100vh;
+        font-family: "Figtree", sans-serif;
+        background-color: var(--Yellow);
+      }
+      .wrap-block {
+        display: flex;
+        flex-wrap: wrap;
+        /* align-items: center; */
+        justify-content: center;
+        gap: 1rem;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 375px;
+        background-color: var(--White);
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 10px 10px 2px var(--Gray950);
+      }
+      .wrap-block img {
+        width: 100%;
+        border-radius: 1rem;
+      }
+      .block-header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      .block-header .block-head {
+        background-color: var(--Yellow);
+        width: max-content;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+        font-weight: var(--weight800);
+        font-family: "FigtreeExtraBold", sans-serif;
+      }
+      .block-header .date {
+        color: var(--Gray950);
+        font-family: "FigtreeSemiBold", sans-serif;
+        font-weight: var(--Weight500);
+      }
+
+      .block-content {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+        gap: 1rem;
+      }
+      .block-content-header {
+        font-weight: var(--weight800);
+        font-family: "FigtreeExtraBold", sans-serif;
+      }
+      .block-content-body {
+        color: var(--Gray500);
+      }
+      .block-footer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        /* justify-content: center; */
+      }
+      .profile {
+        width: 2rem !important;
+        height: auto !important;
+      }
+      .profile-name {
+        font-weight: var(--weight800);
+        font-family: "FigtreeExtraBold", sans-serif;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-top: 2rem;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      @media screen and (max-width: 500px) {
+        .wrap-block {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="block-container">
+      <div class="wrap-block">
+        <img
+          class="block-img"
+          src="../../assets/images/illustration-article.svg"
+          alt=""
+        />
+        <header class="block-header">
+          <p class="block-head">Learning</p>
+          <p class="date">Published 21 Dec 2023</p>
+        </header>
+        <section class="block-content">
+          <h1 class="block-content-head">HTML & CSS foundations</h1>
+          <p class="block-content-body">
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </p>
+        </section>
+        <figure class="block-footer">
+          <img
+            class="profile"
+            src="../../assets/images/image-avatar.webp"
+            alt=""
+          />
+          <p class="profile-name">Greg Hooper</p>
+        </figure>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </main>
+  </body>
+</html>
